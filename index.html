@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Vegetable Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .fact-display {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="fact-display">
+        <h1>Random Vegetable Fact</h1>
+        <p id="fact"></p>
+        <button id="fact-button">Show Random Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Vegetables are rich in vitamins, minerals, and antioxidants, which are essential for maintaining good health and preventing diseases.",
+            "The color of vegetables often indicates their nutrient content. For example, orange and yellow vegetables like carrots and sweet potatoes are high in beta-carotene.",
+            "Most vegetables are high in dietary fiber, which aids in digestion and helps maintain a healthy weight by keeping you feeling full longer.",
+            "Vegetables are generally low in calories, making them an excellent choice for those looking to maintain or lose weight.",
+            "Many vegetables are seasonal, meaning they are best consumed when they are in season, enhancing their flavor and supporting local agriculture.",
+            "Vegetables can be eaten raw, cooked, steamed, roasted, or grilled, making them a versatile ingredient in various cuisines around the world.",
+            "Some vegetables, like onions and garlic, have been cultivated for thousands of years and were used in ancient civilizations for both culinary and medicinal purposes.",
+            "Many vegetables, such as cucumbers and lettuce, have high water content, which helps keep you hydrated.",
+            "While not as high in protein as legumes, certain vegetables like peas and spinach contain protein and can contribute to your daily intake.",
+            "Growing a variety of vegetables helps preserve biodiversity and supports ecosystems, as different plants can benefit each other when grown together."
+        ];
+
+        document.getElementById('fact-button').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
